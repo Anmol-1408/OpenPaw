@@ -1,0 +1,37 @@
+import chalk from "chalk";
+import { select, isCancel } from "@clack/prompts";
+
+export async function runCliMode() {
+    console.log(chalk.green("Running the CLI agent..."));
+    // Add your CLI mode logic here
+
+    while (true) {
+        const mode = await select({
+            message: "Select a CLI mode:",
+            options: [
+                { value: "agent", label: "Agent Mode" },
+                { value: "plan", label: "Plan Mode" },
+                { value: "ask", label: "Ask Mode" },
+                { value: "back", label: "← Back to main menu" },
+            ]
+        });
+
+        if (isCancel(mode) || mode === "back") return;
+        if (mode === "agent") {
+            console.log(chalk.green("Running the CLI agent..."));
+            // await runAgentMode()
+        }
+        if (mode === "ask") {
+            console.log(chalk.green("Running the Ask mode..."));
+            // await runAskMode()
+        }
+        if (mode === "plan") {
+            console.log(chalk.green("Running the Plan mode..."));
+            // await runPlanMode()
+        }
+
+        if (mode !== "agent" && mode !== "plan" && mode !== "ask") {
+            console.log(chalk.yellow("\nThat mode is not implemented yet.\n"));
+        }
+    }
+}
