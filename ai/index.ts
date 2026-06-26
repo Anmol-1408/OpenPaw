@@ -1,2 +1,2 @@
-import { getAgentModel } from './ai.config';
+export { getAgentModel } from './ai.config';
 
