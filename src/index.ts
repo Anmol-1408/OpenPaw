@@ -6,6 +6,7 @@ import { runWakeup } from "./terminalUI/wakeup";
 
 const program = new Command();
 
+
 program
   .name("openpaw")
   .description("It is a CLI tool with AI agents")
