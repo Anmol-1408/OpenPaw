@@ -1,13 +1,19 @@
 {
   "name": "openpaw",
-  "module": "index.ts",
+  "module": "src/index.ts",
   "type": "module",
   "private": true,
   "bin": {
-    "openpaw": "./index.ts"
+    "openpaw": "src/index.ts"
+  },
+  "scripts": {
+    "dev": "bun --watch src/server.ts",
+    "start": "bun src/server.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6"
   },
   "peerDependencies": {
     "typescript": "^5"
@@ -17,15 +23,21 @@
     "@clack/prompts": "^1.6.0",
     "@mendable/firecrawl-js": "^4.28.3",
     "@openrouter/ai-sdk-provider": "^2.9.1",
+    "@prisma/client": "6",
     "@types/marked-terminal": "^6.1.1",
     "@types/node": "^26.0.1",
     "ai": "^6.0.209",
+    "better-auth": "^1.6.23",
     "chalk": "^5.6.2",
     "commander": "^15.0.0",
+    "cors": "^2.8.6",
     "diff": "^9.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
     "figlet": "^1.11.0",
     "marked": "^18.0.5",
     "marked-terminal": "^7.3.0",
+    "prisma": "6",
     "telegraf": "^4.16.3"
   }
 }
