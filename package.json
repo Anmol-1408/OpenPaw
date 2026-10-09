@@ -1,10 +1,10 @@
 {
-  "name": "openpaw",
+  "name": "looper",
   "module": "src/index.ts",
   "type": "module",
   "private": true,
   "bin": {
-    "openpaw": "src/index.ts"
+    "looper": "src/index.ts"
   },
   "scripts": {
     "dev": "bun --watch src/server.ts",
