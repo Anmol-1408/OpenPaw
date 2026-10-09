@@ -1,14 +1,14 @@
 #!/usr/bin/env bun
 
 import { Command } from "commander";
-import { runWakeup } from "./terminalUI/wakeup";
+import { runWakeup } from "./src/terminalUI/wakeup";
 
 
 const program = new Command();
 
 
 program
-  .name("openpaw")
+  .name("looper")
   .description("It is a CLI tool with AI agents")
   .version("0.0.1");
 

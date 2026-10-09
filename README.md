@@ -1,4 +1,4 @@
-# OpenPaw
+# Looper
 
 An AI-powered command-line tool built with Bun and TypeScript, designed for interactive AI-assisted workflows.
 
